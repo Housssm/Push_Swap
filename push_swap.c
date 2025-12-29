@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/28 18:31:30 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/29 10:50:33 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,33 @@ Roadmap     :   - Radix ou turkish ?
 
 */
 
+int	is_num(char s)
+{
+	if ((s <= '9' || s >= '0' || s == ' ' ))
+		return (1);
+	else
+		return (0);
+}
 
+int	parsing(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!is_num(str[i]) || str[0] == ' ')
+			return (404);
+		else if ( str[i] == ' ' && str[i + 1] == ' ')
+			return (404);
+		else if (str[i] == ' ' && !is_num(str[i + 1]))
+			return (404);
+		i++;
+	}
+	if (str[i - 1] == ' ')
+		return (404);
+	return (10);
+}
 
 
 // int	ft_atoi(char *s)
@@ -113,14 +139,17 @@ Roadmap     :   - Radix ou turkish ?
 void	push_swap(char *stack_a)
 {
 	
+	if (parsing(stack_a) == 404);
+		return;
+	int i = 
 	
 }
 
 int	main(int ac, char **av)
 {
 	(void)ac;
-	int test = count_num(av[1]);
-	printf("%d\n", test);
-	
+	// int test = count_num(av[1]);
+	// printf("%d\n", test);
+	push_swap(av[1]);
 	return 0;
 }
