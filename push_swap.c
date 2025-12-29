@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/29 14:02:00 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/29 17:49:14 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,33 @@ void	create_linked(t_list **nod, char *str)
 		k = i;
 	}	
 }
+int	is_a_sorted(t_list *lst)
+{
+	t_list	*temp;
+	int		check;
+	
+	if (!lst)
+		return (0);
+	temp = lst;
+	while (temp->next != NULL)
+	{
+		check = temp->i;	
+		temp = temp->next;
+		if (check > temp->i || check == temp->i)
+			return (40);
+	}
+	return (1);
+}
 
+void	sort_small(t_list *lst)
+{
+	
+}
+void	sort_big(t_list *lst)
+{
+	
+
+}
 
 void	push_swap(char *stack_a)
 {
@@ -122,7 +148,10 @@ void	push_swap(char *stack_a)
 	if (parsing(stack_a) == 404)
 		return; /*Doit retourner "ERROR"*/
 	create_linked(&head, stack_a);
+	if (is_a_sorted(head) != 1)
+		return; /*Doit retourner "ERROR"*/
 }
+
 
 int	main(int ac, char **av)
 {
