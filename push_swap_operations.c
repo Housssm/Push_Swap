@@ -6,20 +6,62 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:55:53 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/28 18:28:21 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/29 14:01:00 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstnew(int i)
+int	ft_atoi(char *s)
 {
-	t_list	*head;
+	int	res;
+	int	sign;
 
-	head = (t_list *)malloc(sizeof(t_list));
-	if (!head)
-		return (NULL);
-	head -> i = i;
-	head -> next = NULL;
-	return (head);
+	res = 0;
+	sign = 1;
+	while (*s == ' ' || (*s >= 9 && *s <= 13))
+		s++;
+	if (*s == '-' || *s == '+')
+		sign = 44 - '-';
+	while (*s >= '0' && *s <= '9')
+		res = res * 10 + *s++ - '0';
+	return (res * sign);
 }
+
+t_list	*ft_lst_last(t_list *lst)
+{
+	t_list	*temp;
+
+	if (!lst)
+		return (NULL);
+	temp = lst;
+	while (temp->next != NULL)
+		temp = temp->next;
+	return (temp);
+}
+
+void	lst_add_back(t_list **lst,char *number)
+{
+	t_list	*new;
+
+	if (*lst == NULL)
+	{
+		(*lst) = (t_list *)malloc(sizeof(t_list));
+		if (!lst)
+			return;
+		(*lst)->i = ft_atoi(number);
+		(*lst)->next = NULL;
+		}
+	else 
+	{
+		new = (t_list *)malloc(sizeof(t_list));
+		if (!new)
+			return;
+		new-> i = ft_atoi(number);		
+		new->next = NULL;
+		ft_lst_last((*lst))-> next = new;
+	}
+}
+
+
+

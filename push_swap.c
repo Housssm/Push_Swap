@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/29 10:50:33 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/29 14:02:00 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Roadmap     :   - Radix ou turkish ?
                 - 
 
 */
-
 int	is_num(char s)
 {
 	if ((s <= '9' || s >= '0' || s == ' ' ))
@@ -56,93 +55,73 @@ int	parsing(char *str)
 }
 
 
-// int	ft_atoi(char *s)
-// {
-// 	int	res;
-// 	int	sign;
 
-// 	res = 0;
-// 	sign = 1;
-// 	while (*s == ' ' || (*s >= 9 && *s <= 13))
-// 		s++;
-// 	if (*s == '-' || *s == '+')
-// 		sign = 44 - '-';
-// 	while (*s >= '0' && *s <= '9')
-// 		res = res * 10 + *s++ - '0';
-// 	return (res * sign);
-// }
-// int	count_num(char *str)
-// {
-// 	int	i;
+int	count_num(char *str)
+{
+	int	i;
 
-// 	i = 0;
-// 	while (*str)
-// 	{
-// 		while (*str == ' ')
-// 			str++;
-// 		if (*str == '\0')
-// 			break;
-// 		while (*str && *str != ' ')
-// 			str++;
-// 		i++;
-// 	}
-// 	return (i);
-// }
-// char	*ft_strdup(char *s, int deb, int end)
-// {
-// 	char	*dest;
-// 	int		i;
+	i = 0;
+	while (*str)
+	{
+		while (*str == ' ')
+			str++;
+		if (*str == '\0')
+			break;
+		while (*str && *str != ' ')
+			str++;
+		i++;
+	}
+	return (i);
+}
+char	*ft_strdup(char *s, int deb, int end)
+{
+	char	*dest;
+	int		i;
 
-// 	i = 0;
-// 	dest = malloc(sizeof(char) * (end - deb) + 1);
-// 	if (dest == NULL)
-// 		return (0);
-// 	while (deb < end)
-// 	{
-// 		dest[i] = s[deb];
-// 		i++;
-// 		deb++;
-// 	}
-// 	dest[i] = '\0';
-// 	return (dest);
-// }
+	i = 0;
+	dest = malloc(sizeof(char) * (end - deb) + 1);
+	if (!dest)
+		return (0);
+	while (deb <= end)
+	{
+		dest[i] = s[deb];
+		i++;
+		deb++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
-// void	create_linked(char *str)
-// {
-// 	int		i;
-// 	int		j;
-// 	int		k;
-// 	char 	number;
-// 	t_list 	*nod;
+void	create_linked(t_list **nod, char *str)
+{
+	int		i;
+	int		k;
+	char 	*number;
 
-// 	number = NULL;
-// 	i = 0;
-// 	j = 0;
-// 	while (str[i])
-// 	{
-// 		while (str[i] && str[i] == ' ')
-// 			i++;
-// 		k = i;
-// 		while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-// 			i++;
-// 		if ( str[i] == '\0' || str[i] == ' ')
-// 		{
-// 			number = ft_strdup(str, k,i);
-// 			printf("%s\n", number);
-// 			nod = ft_lstnew(ft_atoi(number));
-// 			printf("%d\n", nod->i);
-// 		}
-// 	}	
-// }
+	number = NULL;
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] && str[i] == ' ')
+			i++;
+		k = i;
+		while (str[i] && (str[i] != ' '))
+			i++;
+		number = ft_strdup(str, k,i);
+	 	lst_add_back(nod, number);
+		k = i;
+	}	
+}
 
 
 void	push_swap(char *stack_a)
 {
-	
-	if (parsing(stack_a) == 404);
-		return;
-	int i = 
-	
+	t_list *head;
+
+	head = NULL;
+	if (parsing(stack_a) == 404)
+		return; /*Doit retourner "ERROR"*/
+	create_linked(&head, stack_a);
 }
 
 int	main(int ac, char **av)
@@ -150,6 +129,14 @@ int	main(int ac, char **av)
 	(void)ac;
 	// int test = count_num(av[1]);
 	// printf("%d\n", test);
+	// t_list *head =push_swap(av[1]);
+	// printf("%d ->\n", head->i);
+	// while (head != NULL)
+	// {
+    //     printf("%d ->\n", head->i);
+	// 	head = head->next;
+	// }
 	push_swap(av[1]);
+	// printf("content = %d\n", head->i);
 	return 0;
 }
