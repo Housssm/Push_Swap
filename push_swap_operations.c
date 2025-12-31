@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:55:53 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/29 14:01:00 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/31 20:04:42 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,16 @@ void	lst_add_back(t_list **lst,char *number)
 		if (!lst)
 			return;
 		(*lst)->i = ft_atoi(number);
-		(*lst)->next = NULL;
-		}
+		(*lst)->next = (*lst);
+		(*lst)->previous = (*lst);	
+	}
 	else 
 	{
 		new = (t_list *)malloc(sizeof(t_list));
 		if (!new)
 			return;
 		new-> i = ft_atoi(number);		
-		new->next = NULL;
+		new->next = ();
 		ft_lst_last((*lst))-> next = new;
 	}
 }

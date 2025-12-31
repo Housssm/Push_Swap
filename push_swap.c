@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/29 17:49:14 by hoel-har         ###   ########.fr       */
+/*   Updated: 2025/12/30 22:47:05 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ int	parsing(char *str)
 		return (404);
 	return (10);
 }
-
-
 
 int	count_num(char *str)
 {
@@ -130,15 +128,15 @@ int	is_a_sorted(t_list *lst)
 	return (1);
 }
 
-void	sort_small(t_list *lst)
-{
+// void	sort_small(t_list *lst)
+// {
 	
-}
-void	sort_big(t_list *lst)
-{
+// }
+// void	sort_big(t_list *lst)
+// {
 	
 
-}
+// }
 
 void	push_swap(char *stack_a)
 {
