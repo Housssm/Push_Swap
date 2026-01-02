@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:55:53 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/31 20:04:42 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/02 15:43:50 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,22 @@ t_list	*ft_lst_last(t_list *lst)
 	while (temp->next != NULL)
 		temp = temp->next;
 	return (temp);
+}
+int	*ft_lst_last(t_list *lst)
+{
+	t_list	*temp;
+	int		i;
+	
+	i = 0;
+	if (!lst)
+		return (NULL);
+	temp = lst;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+		i++;
+	}
+	return (i);
 }
 
 void	lst_add_back(t_list **lst,char *number)

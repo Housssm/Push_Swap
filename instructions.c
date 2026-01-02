@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:17:01 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/31 23:22:11 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:07:53 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,27 @@ int	ft_atoi(char *s)
 
 t_list	*ft_lst_last(t_list *lst)
 {
-	t_list	*temp;
-
 	if (!lst)
-		return (NULL);
-	temp = lst;
-	while (temp->next != lst)
-		temp = temp->next;
-	return (temp);
+		return (0);	
+	return (lst->previous);	
+}
+
+int	ft_lst_size(t_list *lst)
+{
+	t_list	*current;
+	int		i;
+
+	i = 0;
+	if (!lst)
+		return (0);
+	current = lst;
+	i++;
+	while (current->next != lst)
+	{
+		current = current->next;
+		i++;
+	}
+	return (i);	
 }
 
 void	lst_add_back(t_list **lst,char *number)
@@ -60,16 +73,13 @@ void	lst_add_back(t_list **lst,char *number)
 		if (!new)
 			return;
 		last = ft_lst_last((*lst));
-		new-> i = ft_atoi(number);		
+		new-> i = ft_atoi(number);	
 		new->next = (*lst);
 		new->previous = last;
 		last->next = new;
 		(*lst)->previous = new;
 	}
 }
-
-
-
 
 void	swap_a(t_list **lst)
 {
@@ -78,7 +88,7 @@ void	swap_a(t_list **lst)
 	t_list	*l3;
 	t_list	*last;
 	
-	if (!lst)
+	if (!lst || ft_lst_size(lst) <= 1)
 		return;
 	last = ft_lst_last((*lst));
 	l1 = (*lst);
@@ -98,7 +108,7 @@ void	swap_b(t_list **lst)
 	t_list	*l3;
 	t_list	*last;
 	
-	if (!lst)
+	if (!lst || ft_lst_size(lst) <= 1)
 		return;
 	last = ft_lst_last((*lst));
 	l1 = (*lst);
@@ -118,7 +128,7 @@ void	ss(t_list **lst1, t_list **lst2)
 	swap_a(lst2);
 }
 
-void	pa_a(t_list **a, t_list **b)
+void	pa_a(t_list **a, t_list **b) /*a changer car il faut juste envoyer le prenmier node */
 {
 	t_list 	*l1_a;
 	t_list 	*l1_b;
@@ -145,6 +155,7 @@ void	pa_a(t_list **a, t_list **b)
 	lasta->next = l1_b;
 	l1_b->previous = lasta;	
 }
+
 int	main(void)
 {
 	t_list *head = NULL;
@@ -160,7 +171,7 @@ int	main(void)
 	lst_add_back(&tete, "20");
 	lst_add_back(&tete, "30");
 	lst_add_back(&tete, "40");
-	ss(&head, &tete);
+	// ss(&head, &tete);
 	if (head)
 	{
 		printf("%d\n", head->i);
