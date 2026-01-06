@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/02 19:56:02 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:16:11 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include "libft/libft.h"
 
 // Linked list structure
 typedef struct s_list
 {
 	int				i;
+	int				index;
 	struct s_list	*next;
 	struct s_list	*previous;	
+	
 }t_list;
 
 
@@ -42,10 +45,10 @@ void	rrr(t_list **a, t_list **b);
 
 
 //Utils
-void	lst_add_back(t_list **lst, char *number);
-int		ft_lst_size(t_list *lst);
-t_list	*ft_lst_last(t_list *lst);
-int		ft_atoi(char *s);
+// void	lst_add_back(t_list **lst, char *number);
+// int		ft_lst_size(t_list *lst);
+// t_list	*ft_lst_last(t_list *lst);
+// int		ft_atoi(char *s);
 
 
 #endif

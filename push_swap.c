@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/30 22:47:05 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:41:12 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ Roadmap     :   - Radix ou turkish ?
                 - Si utilisation de radix conversion en chiffre
                 - Coder toutes les push, swap, rotate et reverse rotate;
 				- Count word pour savoir le nombre de mot, utiliser atoi pour convertir chaque mot en nb et attribuer valeur au noeud
-                - 
+                
+				
+DONE 		:	-Parsing done partially (some case missing).
+				-All instruction are done.
+				-D
 
 */
 int	is_num(char s)
@@ -110,6 +114,7 @@ void	create_linked(t_list **nod, char *str)
 		k = i;
 	}	
 }
+
 int	is_a_sorted(t_list *lst)
 {
 	t_list	*temp;
