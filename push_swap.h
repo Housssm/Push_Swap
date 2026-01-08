@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:34:15 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:17:51 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ typedef struct s_list
 	int				i;
 	int				index;
 	struct s_list	*next;
-	struct s_list	*previous;	
-	
+	struct s_list	*previous;
 }t_list;
 
 
@@ -59,8 +58,6 @@ void	find_lst_int(t_list **original, int value, int idx);
 void	index_attributition(t_list **or, t_list **sorted);
 
 //Utils
-// void	lst_add_back(t_list **lst, char *number);
-// int		ft_lst_size(t_list *lst);
 int		ft_atoi(char *s);
 
 

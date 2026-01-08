@@ -6,11 +6,11 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:28:17 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:36:57 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:42:04 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_atoi(char *s)
 {

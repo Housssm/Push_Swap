@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:37:12 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 19:45:59 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ DONE 		:	-Parsing done partially (some case missing).
 				-All instruction are done.
 				-D
 
+PARSING TO CHECK : si pas dargument , si doublon tout free				
 */
 int	is_num(char s)
 {
@@ -115,23 +116,7 @@ void	create_linked(t_list **nod, char *str)
 	}	
 }
 
-int	is_a_sorted(t_list *lst)
-{
-	t_list	*temp;
-	int		check;
-	
-	if (!lst)
-		return (0);
-	temp = lst;
-	while (temp->next != NULL)
-	{
-		check = temp->i;	
-		temp = temp->next;
-		if (check > temp->i || check == temp->i)
-			return (40);
-	}
-	return (1);
-}
+
 
 // void	sort_small(t_list *lst)
 // {
