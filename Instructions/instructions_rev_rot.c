@@ -6,11 +6,11 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:17:01 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/02 19:52:46 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:25:23 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rra(t_list **lst)
 {

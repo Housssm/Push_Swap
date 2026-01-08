@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/06 14:41:12 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:37:12 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,19 +156,19 @@ void	push_swap(char *stack_a)
 }
 
 
-int	main(int ac, char **av)
-{
-	(void)ac;
-	// int test = count_num(av[1]);
-	// printf("%d\n", test);
-	// t_list *head =push_swap(av[1]);
-	// printf("%d ->\n", head->i);
-	// while (head != NULL)
-	// {
-    //     printf("%d ->\n", head->i);
-	// 	head = head->next;
-	// }
-	push_swap(av[1]);
-	// printf("content = %d\n", head->i);
-	return 0;
-}
+// int	main(int ac, char **av)
+// {
+// 	(void)ac;
+// 	// int test = count_num(av[1]);
+// 	// printf("%d\n", test);
+// 	// t_list *head =push_swap(av[1]);
+// 	// printf("%d ->\n", head->i);
+// 	// while (head != NULL)
+// 	// {
+//     //     printf("%d ->\n", head->i);
+// 	// 	head = head->next;
+// 	// }
+// 	push_swap(av[1]);
+// 	// printf("content = %d\n", head->i);
+// 	return 0;
+// }

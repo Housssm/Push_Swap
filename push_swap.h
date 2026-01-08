@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/06 14:16:11 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:34:15 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,24 @@ void	rrb(t_list **lst);
 void	rrr(t_list **a, t_list **b);
 
 
+//  List Manipulation
+
+
+t_list	*lst_copy(t_list **lst);
+void	lst_swap(t_list *a, t_list *b);
+void	lst_add_back(t_list **lst, char *number);
+void	lst_add_back_int(t_list **lst, int number);
+void	ft_lst_sorted(t_list *lst);
+void	ft_index(t_list **lst);
+int		find_index_max(t_list **sorted);
+int		find_lst_index(t_list **sorted, int idx);
+void	find_lst_int(t_list **original, int value, int idx);
+void	index_attributition(t_list **or, t_list **sorted);
+
 //Utils
 // void	lst_add_back(t_list **lst, char *number);
 // int		ft_lst_size(t_list *lst);
-// t_list	*ft_lst_last(t_list *lst);
-// int		ft_atoi(char *s);
+int		ft_atoi(char *s);
 
 
 #endif
