@@ -1,35 +1,47 @@
-LIBC =    push_swap.c 
-	
-SRCS = ${LIBC}
-
-SRCSALL = ${LIBC}
+SRCS = \
+	main.c \
+	Indexing/indexation.c \
+	Indexing/lst_manipulation.c \
+	Indexing/utils.c \
+	Instructions/instruction_rotate.c \
+	Instructions/instruction_swap.c \
+	Instructions/instruction_push.c \
+	Instructions/instruction_rev_rot.c \
+	Sorting/sorting.c \
+	Sorting/sorting_utils.c \
 
 OBJS = ${SRCS:.c=.o}
 
-OBJSALL = ${SRCSALL:.c=.o}
+NAME = push_swap
 
-NAME = push_swap.a
+HEADER = push_swap.h
+
+LIBFT_DIR = ./libft
+LIBFT = ${LIBFT_DIR}/libft.a
 
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra 
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-
-${NAME}:    ${OBJS}
-	ar -rsc ${NAME} ${OBJS}
-
-bonus:    ${OBJSALL}
-	ar -rsc ${NAME} ${OBJSALL}
-
 all:     ${NAME}
 
+${NAME}: ${LIBFT} ${OBJS}
+	${CC} ${CFLAGS} ${OBJS} ${LIBFT} -o ${NAME}
+
+${LIBFT}:				
+	make -C ${LIBFT_DIR}
+
+%.o: %.c ${HEADER}
+	${CC} ${CFLAGS} -I${LIBFT_DIR} -c $< -o $@
+
 clean:    
-	rm -f ${OBJSALL}
+	rm -f ${OBJS}
+	make -C ${LIBFT_DIR} clean
 
 fclean:    clean;
 	rm -f ${NAME}
+	rm -f a.out
+	make -C ${LIBFT_DIR} fclean
 
 re:    fclean all
 

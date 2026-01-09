@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 16:38:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 16:39:31 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 20:18:28 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	get_min_value(t_list **lst, t_list **lst_b)
 {
 	t_list	*current;
-	t_list	*temp;
 	t_list	*min_node;
 
 	if (!(*lst) || !lst || !lst_b)
@@ -38,7 +37,6 @@ void	get_min_value(t_list **lst, t_list **lst_b)
 void	get_max_value(t_list **lst, t_list **lst_b)
 {
 	t_list	*current;
-	t_list	*temp;
 	t_list	*max_node;
 
 	if (!(*lst) || !lst || !lst_b)

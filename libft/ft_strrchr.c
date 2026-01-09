@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:25:16 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/16 21:28:54 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 20:21:41 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *s, int x)
 	return (NULL);
 }
 
-#define SIZE 40
+/* #define SIZE 40
  
 int main(void)
 {
@@ -40,4 +40,4 @@ int main(void)
   ptr = ft_strrchr( buffer1, ch );
   printf( "The last occurrence of %c in '%s' is '%s'\n",
             ch, buffer1, ptr );
-}
+} */

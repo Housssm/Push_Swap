@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 19:45:59 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 20:33:48 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	count_num(char *str)
 	}
 	return (i);
 }
-char	*ft_strdup(char *s, int deb, int end)
+char	*ft_strduper(char *s, int deb, int end)
 {
 	char	*dest;
 	int		i;
@@ -110,23 +110,11 @@ void	create_linked(t_list **nod, char *str)
 		k = i;
 		while (str[i] && (str[i] != ' '))
 			i++;
-		number = ft_strdup(str, k,i);
+		number = ft_strduper(str, k,i);
 	 	lst_add_back(nod, number);
 		k = i;
 	}	
 }
-
-
-
-// void	sort_small(t_list *lst)
-// {
-	
-// }
-// void	sort_big(t_list *lst)
-// {
-	
-
-// }
 
 void	push_swap(char *stack_a)
 {

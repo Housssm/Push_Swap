@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 19:17:51 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:41:08 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_list
 	struct s_list	*previous;
 }t_list;
 
-
 // Needed operations
 void	sa(t_list **lst);
 void	sb(t_list **lst);
@@ -42,10 +41,7 @@ void	rra(t_list **lst);
 void	rrb(t_list **lst);
 void	rrr(t_list **a, t_list **b);
 
-
 //  List Manipulation
-
-
 t_list	*lst_copy(t_list **lst);
 void	lst_swap(t_list *a, t_list *b);
 void	lst_add_back(t_list **lst, char *number);
@@ -56,6 +52,15 @@ int		find_index_max(t_list **sorted);
 int		find_lst_index(t_list **sorted, int idx);
 void	find_lst_int(t_list **original, int value, int idx);
 void	index_attributition(t_list **or, t_list **sorted);
+
+// Sorting
+void	get_min_value(t_list **lst, t_list **lst_b);
+void	get_max_value(t_list **lst, t_list **lst_b);
+int		is_a_sorted(t_list *lst);
+void	sort_2(t_list **lst);
+void	sort_3(t_list **lst);
+void	sort_4(t_list **lst_a, t_list **lst_b);
+void	sort_5(t_list **lst_a, t_list **lst_b);
 
 //Utils
 int		ft_atoi(char *s);

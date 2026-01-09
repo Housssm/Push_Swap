@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:53:03 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:31:50 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 20:24:42 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_memcmp(const void *bloc1, const void *bloc2, size_t size);
 char	*ft_strnstr(const char *src, const char *tosearch, size_t len);
 // int		ft_atoi(const char *src);
 void	*ft_calloc(size_t count, size_t size);
-// char	*ft_strdup(const char *str);
+char	*ft_strdup(const char *str);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *s2);

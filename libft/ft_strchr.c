@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:46:47 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/12/16 21:27:07 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 20:22:11 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strchr(const char *str, int x)
 		return ((char *)(str + i));
 	return (0);
 }
-
+/* 
 #define SIZE 40
 int main(void)
 {
@@ -43,4 +43,4 @@ int main(void)
   //ptr = strchr( buffer1, ch );
   ptr = ft_strchr("teste",'\0');
   printf("%s",ptr);
-// }
+// } */
