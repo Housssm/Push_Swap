@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:17:01 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:17:25 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/10 00:06:55 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	rrr(t_list **a, t_list **b)
 	rra(a);
 	rrb(b);
 }
-
 /*int	main(void)
 {
 	t_list *head = NULL;

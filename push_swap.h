@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 16:41:08 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 23:28:18 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include "libft/libft.h"
+# include <limits.h>
+
+
 
 // Linked list structure
 typedef struct s_list
@@ -44,7 +47,7 @@ void	rrr(t_list **a, t_list **b);
 //  List Manipulation
 t_list	*lst_copy(t_list **lst);
 void	lst_swap(t_list *a, t_list *b);
-void	lst_add_back(t_list **lst, char *number);
+void	lst_add_back(t_list **lst, int number);
 void	lst_add_back_int(t_list **lst, int number);
 void	ft_lst_sorted(t_list *lst);
 void	ft_index(t_list **lst);
@@ -63,7 +66,7 @@ void	sort_4(t_list **lst_a, t_list **lst_b);
 void	sort_5(t_list **lst_a, t_list **lst_b);
 
 //Utils
-int		ft_atoi(char *s);
+// int		ft_atoi(char *s);
 
 
 #endif

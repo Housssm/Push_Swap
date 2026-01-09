@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:25:16 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:21:41 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/10 00:08:33 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int x)
 	while (i >= 0)
 	{
 		if (s[i] == (char) x)
-			return ((char *)&s[i +1 ]);
+			return ((char *)&s[i +1]);
 		i--;
 	}
 	return (NULL);

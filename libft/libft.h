@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:53:03 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:24:42 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 23:28:44 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		ft_strncmp(const char *first, const char *second, size_t length);
 void	*ft_memchr(const void *memBlock, int searchedChar, size_t lenght);
 int		ft_memcmp(const void *bloc1, const void *bloc2, size_t size);
 char	*ft_strnstr(const char *src, const char *tosearch, size_t len);
-// int		ft_atoi(const char *src);
+int		ft_atoi(const char *src);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *str);
 char	*ft_substr(char const *str, unsigned int start, size_t len);

@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:33:48 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 21:40:22 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,35 +29,10 @@ DONE 		:	-Parsing done partially (some case missing).
 				-All instruction are done.
 				-D
 
-PARSING TO CHECK : si pas dargument , si doublon tout free				
+PARSING TO CHECK : In case of error, it must display "Error" followed by an ’\n’ on the standard error.
+some arguments not being integers, some arguments exceeding the integer limits, and/or the presence of duplicates		
 */
-int	is_num(char s)
-{
-	if ((s <= '9' || s >= '0' || s == ' ' ))
-		return (1);
-	else
-		return (0);
-}
 
-int	parsing(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!is_num(str[i]) || str[0] == ' ')
-			return (404);
-		else if ( str[i] == ' ' && str[i + 1] == ' ')
-			return (404);
-		else if (str[i] == ' ' && !is_num(str[i + 1]))
-			return (404);
-		i++;
-	}
-	if (str[i - 1] == ' ')
-		return (404);
-	return (10);
-}
 
 int	count_num(char *str)
 {
@@ -114,6 +89,7 @@ void	create_linked(t_list **nod, char *str)
 	 	lst_add_back(nod, number);
 		k = i;
 	}	
+	free(str);
 }
 
 void	push_swap(char *stack_a)
@@ -127,21 +103,4 @@ void	push_swap(char *stack_a)
 	if (is_a_sorted(head) != 1)
 		return; /*Doit retourner "ERROR"*/
 }
-
-
-// int	main(int ac, char **av)
-// {
-// 	(void)ac;
-// 	// int test = count_num(av[1]);
-// 	// printf("%d\n", test);
-// 	// t_list *head =push_swap(av[1]);
-// 	// printf("%d ->\n", head->i);
-// 	// while (head != NULL)
-// 	// {
-//     //     printf("%d ->\n", head->i);
-// 	// 	head = head->next;
-// 	// }
-// 	push_swap(av[1]);
-// 	// printf("content = %d\n", head->i);
-// 	return 0;
-// }
+int, fonction doublon et valeur de in max et min 

@@ -6,24 +6,24 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:28:17 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:42:04 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 23:33:14 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_atoi(char *s)
-{
-	int	res;
-	int	sign;
+// int	ft_atoi(char *s)
+// {
+// 	int	res;
+// 	int	sign;
 
-	res = 0;
-	sign = 1;
-	while (*s == ' ' || (*s >= 9 && *s <= 13))
-		s++;
-	if (*s == '-' || *s == '+')
-		sign = 44 - *s++;
-	while (*s >= '0' && *s <= '9')
-		res = res * 10 + *s++ - '0';
-	return (res * sign);
-}
+// 	res = 0;
+// 	sign = 1;
+// 	while (*s == ' ' || (*s >= 9 && *s <= 13))
+// 		s++;
+// 	if (*s == '-' || *s == '+')
+// 		sign = 44 - *s++;
+// 	while (*s >= '0' && *s <= '9')
+// 		res = res * 10 + *s++ - '0';
+// 	return (res * sign);
+// }

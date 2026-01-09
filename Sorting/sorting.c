@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:43:42 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:18:58 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 22:42:17 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	sort_5(t_list **lst_a, t_list **lst_b)
 	pa(lst_a, lst_b);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list *head = NULL;
 	t_list *tete = NULL;	
@@ -130,4 +130,4 @@ int	main(void)
 		}
 	}
 	return 0;
-}
+} */

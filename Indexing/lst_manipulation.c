@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:39:25 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/09 23:07:02 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,35 @@ void	lst_swap(t_list *a, t_list *b)
 	b->i = temp;
 }
 
-void	lst_add_back(t_list **lst, char *number)
+// void	lst_add_back(t_list **lst, char *number)
+// {
+// 	t_list	*new;
+// 	t_list	*last;
+
+// 	if (*lst == NULL)
+// 	{
+// 		(*lst) = (t_list *)malloc(sizeof(t_list));
+// 		if (!(*lst))
+// 			return ;
+// 		(*lst)->i = ft_atoi(number);
+// 		(*lst)->next = (*lst);
+// 		(*lst)->previous = (*lst);
+// 	}
+// 	else
+// 	{
+// 		new = (t_list *)malloc(sizeof(t_list));
+// 		if (!new)
+// 			return ;
+// 		last = (*lst)->previous;
+// 		new->i = ft_atoi(number);
+// 		new->next = (*lst);
+// 		new->previous = last;
+// 		last->next = new;
+// 		(*lst)->previous = new;
+// 	}
+// }
+
+void	lst_add_back(t_list **lst, int number)
 {
 	t_list	*new;
 	t_list	*last;
@@ -48,7 +76,7 @@ void	lst_add_back(t_list **lst, char *number)
 		(*lst) = (t_list *)malloc(sizeof(t_list));
 		if (!(*lst))
 			return ;
-		(*lst)->i = ft_atoi(number);
+		(*lst)->i = number;
 		(*lst)->next = (*lst);
 		(*lst)->previous = (*lst);
 	}
@@ -58,7 +86,7 @@ void	lst_add_back(t_list **lst, char *number)
 		if (!new)
 			return ;
 		last = (*lst)->previous;
-		new->i = ft_atoi(number);
+		new->i = number;
 		new->next = (*lst);
 		new->previous = last;
 		last->next = new;
