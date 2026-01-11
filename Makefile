@@ -9,6 +9,9 @@ SRCS = \
 	Instructions/instruction_rev_rot.c \
 	Sorting/sorting.c \
 	Sorting/sorting_utils.c \
+	cleaning.c \
+	intitiation.c \
+	parsing.c \	
 
 OBJS = ${SRCS:.c=.o}
 
@@ -21,7 +24,7 @@ LIBFT = ${LIBFT_DIR}/libft.a
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra 
+CFLAGS = -Wall -Werror -Wextra -g3
 
 all:     ${NAME}
 

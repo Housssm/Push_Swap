@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 23:28:18 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/11 19:57:27 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_list
 	int				index;
 	struct s_list	*next;
 	struct s_list	*previous;
+	
 }t_list;
 
 // Needed operations
@@ -65,8 +66,16 @@ void	sort_3(t_list **lst);
 void	sort_4(t_list **lst_a, t_list **lst_b);
 void	sort_5(t_list **lst_a, t_list **lst_b);
 
-//Utils
-// int		ft_atoi(char *s);
+// Cleaning
+void	free_tab(char **tab);
+void	ft_lstdelone(t_list *lst);
+void	ft_lstclear(t_list **lst);
+
+// Parsing
+int	is_valid(char *str);
+int	parsing(char **av);
+int	check_double(t_list **lst);
+void	first_step(int ac, char **av, t_list **lst);
 
 
 #endif
