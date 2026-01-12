@@ -11,7 +11,7 @@ SRCS = \
 	Sorting/sorting_utils.c \
 	cleaning.c \
 	intitiation.c \
-	parsing.c \	
+	parsing.c 	
 
 OBJS = ${SRCS:.c=.o}
 

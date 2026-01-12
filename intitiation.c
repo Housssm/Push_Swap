@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:51:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/11 19:58:13 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 08:47:19 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,26 +39,26 @@ void	first_step(int ac, char **av, t_list **lst)
 	if ( ac < 2)
 	{
 		write(2, "Error\n", 6);
-		return (0);
+		return ;
 	}
 	if ( ac == 2)
 	{
 		if (is_valid(av[1]) == 0)
 		{
 			write(2, "Error\n", 6);
-			return(0);
+			return ;
 		}
 		tab = ft_split(av[1], ' ');
-		created_linked_list(ac, tab, &lst);
+		created_linked_list(ac, tab, lst);
 		free_tab(tab);
 	}
 	else if (parsing(av) == 0)
 	{
 		write(2, "Error\n", 6);
-		return(0);
+		return ;
 	}
-	created_linked_list(ac, av, &lst);
-	if (check_double(&lst))
-		return (0);
+	created_linked_list(ac, av, lst);
+	if (check_double(lst))
+		return ;
 	// ft_lstclear(&head);
 }
