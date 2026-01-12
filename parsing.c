@@ -6,11 +6,12 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:45:30 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 15:47:42 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:00:19 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 
 int	is_valid(char *str)
 {
@@ -59,7 +60,7 @@ int	check_double(t_list **lst)
 		temp = current->next;
 		while (temp != current)
 		{
-			if (current->i == temp->i || temp->i == INT_MAX || temp->i == INT_MIN)
+			if (current->i == temp->i)
 				return (1);
 			temp = temp->next;
 		}	
