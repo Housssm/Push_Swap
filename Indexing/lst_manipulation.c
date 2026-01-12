@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 14:16:01 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 17:02:58 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,28 +96,6 @@ void	lst_add_back(t_list **lst, int number)
 	}
 
 }
-
-/* t_list ft_lstnew(int number,  int index, char* str)
-{
-	t_list new = malloc(sizeof(t_list));
-
-	new->value = number;
-	new.index = index;
-	new->str = str;
-
-	return new;
-} */
-
-
-/* lst_add_back(lst, ft_lstnew(index, value))
-
-void	lst_add_back(t_list **lst, t_list *new)
-{
-	if !lst
-		lst =  new;
-	else
-		lst->next= new;
-}*/
 
 void	lst_add_back_int(t_list **lst, int number)
 {
