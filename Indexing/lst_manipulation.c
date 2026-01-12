@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/11 18:46:48 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:18:54 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,19 +95,22 @@ void	lst_add_back(t_list **lst, int number)
 
 }
 
-/* t_list ft_lstnew(int number,  int index, char* str)
+t_list	*ft_lstnew(int number,  int index)
 {
-	t_list new = malloc(sizeof(t_list));
+	t_list	*new;
 
-	new->value = number;
-	new.index = index;
-	new->str = str;
+	new = (t_list *)malloc(sizeof(t_list));
+	
+	new->i = number;
+	new->index = 0;
+	new->next = new;
+	new->previous = new;
 
 	return new;
-} */
+}
 
 
-/* lst_add_back(lst, ft_lstnew(index, value))
+lst_add_back(lst, ft_lstnew(index, value))
 
 void	lst_add_back(t_list **lst, t_list *new)
 {
@@ -115,7 +118,7 @@ void	lst_add_back(t_list **lst, t_list *new)
 		lst =  new;
 	else
 		lst->next= new;
-}*/
+}
 
 void	lst_add_back_int(t_list **lst, int number)
 {

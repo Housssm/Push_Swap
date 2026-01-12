@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   sorting_min_5.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:43:42 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 22:42:17 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:21:37 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	is_a_sorted(t_list *lst)
 
 void	sort_2(t_list **lst)
 {
-	if (!lst)
+	if (!lst || is_a_sorted((*lst)))
 		return ;
 	sa(lst);
 }
@@ -84,10 +84,9 @@ void	sort_5(t_list **lst_a, t_list **lst_b)
 	if (is_a_sorted(((*lst_a))))
 		return ;
 	get_min_value(lst_a, lst_b);
-	get_max_value(lst_a, lst_b);
+	get_min_value(lst_a, lst_b);
 	sort_3(lst_a);
 	pa(lst_a, lst_b);
-	ra(lst_a);
 	pa(lst_a, lst_b);
 }
 
@@ -98,11 +97,6 @@ void	sort_5(t_list **lst_a, t_list **lst_b)
 	t_list *current;
 	// t_list *current1;
 
-	lst_add_back(&head, "9884");
-	lst_add_back(&head, "777");
-	lst_add_back(&head, "1");
-	lst_add_back(&head, "88");
-	lst_add_back(&head, "44");
 	sort_5(&head, &tete);
 	printf("-------    HEAD   -------------\n");
 	if (head)

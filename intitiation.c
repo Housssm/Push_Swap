@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:51:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 08:47:19 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:09:04 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	created_linked_list(int ac, char **av, t_list **lst)
 void	first_step(int ac, char **av, t_list **lst)
 {
 	char	**tab;
-	
+
 	if ( ac < 2)
 	{
 		write(2, "Error\n", 6);

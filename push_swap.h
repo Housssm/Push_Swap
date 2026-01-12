@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 08:49:07 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 10:29:30 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,9 @@ int		find_lst_index(t_list **sorted, int idx);
 void	find_lst_int(t_list **original, int value, int idx);
 void	index_attributition(t_list **or, t_list **sorted);
 
+int	lst_size(t_list *lst);
+
+
 // Sorting
 void	get_min_value(t_list **lst, t_list **lst_b);
 void	get_max_value(t_list **lst, t_list **lst_b);
@@ -65,6 +68,8 @@ void	sort_2(t_list **lst);
 void	sort_3(t_list **lst);
 void	sort_4(t_list **lst_a, t_list **lst_b);
 void	sort_5(t_list **lst_a, t_list **lst_b);
+void	sort_small(t_list **a, t_list **b);
+
 
 // Cleaning
 void	free_tab(char **tab);

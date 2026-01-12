@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:44:34 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 20:17:12 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 09:16:18 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 void	put_head(t_list **lst, t_list *new)
 {
-	if (*lst)
+	if (!lst || !new)
+		return ;
+	if (!(*lst))
+	{
+		new->next = new;
+		new->previous = new;
+	}
+	else
 	{
 		new->next = (*lst);
 		(*lst)->previous->next = new;
 		new->previous = (*lst)->previous;
 		(*lst)->previous = new;
-	}
-	else
-	{
-		new->next = new;
-		new->previous = new;
 	}
 	*lst = new;
 }

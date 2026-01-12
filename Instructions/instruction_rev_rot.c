@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:17:01 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/10 00:06:55 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:21:29 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,6 @@ void	rrr(t_list **a, t_list **b)
 	t_list *current;
 	t_list *current1;
 
-	lst_add_back(&head, "1");
-	lst_add_back(&head, "2");
-	lst_add_back(&head, "3");
-	lst_add_back(&head, "4");
-	lst_add_back(&tete, "10");
-	lst_add_back(&tete, "20");
-	lst_add_back(&tete, "30");
-	lst_add_back(&tete, "40");
 	ss(&head, &tete);
 	//pa(&head, &tete);
 	//sa(&head);

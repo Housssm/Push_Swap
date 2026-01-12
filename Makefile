@@ -7,11 +7,12 @@ SRCS = \
 	Instructions/instruction_swap.c \
 	Instructions/instruction_push.c \
 	Instructions/instruction_rev_rot.c \
-	Sorting/sorting.c \
+	Sorting/sorting_min_5.c \
 	Sorting/sorting_utils.c \
 	cleaning.c \
 	intitiation.c \
-	parsing.c 	
+	parsing.c \
+	lst_utils.c
 
 OBJS = ${SRCS:.c=.o}
 

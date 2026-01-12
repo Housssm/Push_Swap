@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:55:53 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 13:38:57 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:21:57 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,17 +108,6 @@ void	index_attributition(t_list **or, t_list **sorted)
 	t_list *current;
 	t_list *current1;
 
-	lst_add_back(&head, "988");
-	lst_add_back(&head, "-29");
-	lst_add_back(&head, "37");
-	lst_add_back(&head, "1");
-	lst_add_back(&head, "8402");
-	lst_add_back(&head, "803");
-	lst_add_back(&head, "404");
-	lst_add_back(&head, "405");
-	lst_add_back(&head, "406");
-	lst_add_back(&head, "804");
-	lst_add_back(&head, "4900");
 
 	tete = lst_copy(&head);
 	ft_index(&head);
