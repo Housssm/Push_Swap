@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:45:30 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/11 19:50:48 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 15:47:42 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,8 @@ int	check_double(t_list **lst)
 		temp = current->next;
 		while (temp != current)
 		{
-			if (current->i == temp->i)
-			{
-				write(2, "Error\n", 6);
-				ft_lstclear(lst);
+			if (current->i == temp->i || temp->i == INT_MAX || temp->i == INT_MIN)
 				return (1);
-			}
 			temp = temp->next;
 		}	
 		current = current->next;

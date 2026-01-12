@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 10:29:30 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/12 14:44:27 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_lstclear(t_list **lst);
 int		is_valid(char *str);
 int		parsing(char **av);
 int		check_double(t_list **lst);
-void	first_step(int ac, char **av, t_list **lst);
+int	first_step(int ac, char **av, t_list **lst);
 
 
 #endif
