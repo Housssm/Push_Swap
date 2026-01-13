@@ -1,6 +1,7 @@
-Push Swap - Projet 42
+📦 Push Swap - Projet 42
 
 📌 Description
+
 Push Swap est un projet algorithmique du cursus de l'école 42 par hoel-har
 Le but est de trier une pile d'entiers avec un ensemble limité d'opérations, en produisant le moins de coups possible.
 Pour cela, j'ai utilisé l'algorithme turque qui est capable de générer une séquence optimisée d'instructions pour trier les données à l'aide de deux piles (A et B).
@@ -27,7 +28,7 @@ Je dois trier la pile A uniquement en utilisant les opérations autorisées :
 
     Écrire un programme push_swap qui prend une liste d'entiers en argument et affiche la suite d'instructions pour trier la pile.
     L’objectif est de minimiser le nombre d’instructions.
-	
+
 
 🛠️ Compétences développées
 
