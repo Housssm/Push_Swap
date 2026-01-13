@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 20:34:54 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 15:02:14 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:15:52 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ void	sort_stack(t_list **a, t_list **b)
 {
 	int	size;
 
-	if ( !a || !(*a) || !b || !(*b))
-		return ;
+	if ( !a || !(*a) || !b )
+		return ;		
 	size = lst_size(*a);
 	if ( !is_a_sorted(*a) && size <= 5)
 		sort_small(a, b);	
@@ -88,7 +88,6 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	to_sort= NULL;
-
 	if (ac <= 1)
 		return (write(2, "Error\n", 6), 0);
 	if (!first_step(ac, av,&a ))
@@ -99,6 +98,19 @@ int	main(int ac, char **av)
 	sort_stack(&a, &b);
 	ft_lstclear(&to_sort);
 	ft_lstclear(&a);	
+
+	// t_list *current = NULL;
+	// int i = 0;
+	// current = a;
+	// printf("%d\n", current->i);
+	// current = current->next;
+	// while (i < ac - 1)
+	// {
+	// 	printf("%d\n", current->i);
+	// 	current = current ->next;
+	// 	i++;
+	// }
+	
 	return(0);
 
 }

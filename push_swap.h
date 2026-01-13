@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 12:27:36 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 16:46:41 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_list
 	int				index;
 	struct s_list	*next;
 	struct s_list	*previous;
+	int				exist;
 	
 }t_list;
 

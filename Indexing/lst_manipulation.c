@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 17:02:58 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:23:28 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*lst_copy(t_list **lst)
 {
 	t_list	*current;
 	t_list	*new;
-
+	
 	if (! lst || !(*lst))
 		return (NULL);
 	new = NULL;

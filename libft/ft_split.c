@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 11:40:04 by hoel-har          #+#    #+#             */
-/*   Updated: 2025/11/22 18:28:49 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 18:19:20 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ char	**ft_final(char **tabl, const char *str, char c)
 char	**ft_split(char const *str, char c)
 {
 	char	**tabl;
-
 	tabl = malloc(sizeof(char *) * (ft_countwords((char *)str, c) + 1));
 	if (!tabl)
 		return (NULL);
