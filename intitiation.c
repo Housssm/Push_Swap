@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:51:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 16:21:23 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 14:35:01 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,32 +37,6 @@ long	ft_atol(const char *s)
 	return (res * sign);
 }
 
-
-// int	created_linked_list(int ac, char **av, t_list **lst)
-// {
-// 	int			i;
-// 	long int	check;
-	
-// 	if (!lst)
-// 		return (0);
-// 	i = 1;
-// 	check = 0;
-// 	while (i < ac)
-// 	{
-// 		check = ft_atol(av[i]);
-// 		if (av[i][0] == ' ')
-// 			i++;
-// 		if (av[i][0] != ' ')
-// 		{
-// 			if ( check > INT_MAX || check < INT_MIN)
-// 				return (0);
-// 			result = ft_atoi((av[i]));
-// 			lst_add_back(lst, result);
-// 		}
-// 		i++;
-// 	}
-// 	return (1);
-// }
 int	created_linked_list(int ac, char **av, t_list **lst)
 {
 	int			i;
@@ -96,6 +70,8 @@ int	first_step(int ac, char **av, t_list **lst)
 	{
 		if (is_valid(av[1]) == 0)
 			return (write(2, "Error\n", 6), 1);
+		if (ft_countwords(av[1], ' ') == 1)
+			return (1);
 		tab = ft_split(av[1], ' ');
 		if (!created_linked_list(ac, tab, lst))
 		{

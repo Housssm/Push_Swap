@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 16:38:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 10:29:18 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 13:33:41 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	get_max_value(t_list **lst, t_list **lst_b)
 void	sort_small(t_list **a, t_list **b)
 {
 	int	size;
-
 	size = lst_size(*a);
 	if (size == 2)
 		sort_2(a);
@@ -68,5 +67,6 @@ void	sort_small(t_list **a, t_list **b)
 	else if (size == 5)
 		sort_5(a, b);
 }
+
 
 

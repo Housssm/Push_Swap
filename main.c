@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 20:34:54 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 17:10:37 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 15:02:14 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	size_bits(int nb)
 	return (bits);
 }
 
-
 void	final_sort(t_list **a, t_list **b)
 {
 	int	max_num;
@@ -38,21 +37,43 @@ void	final_sort(t_list **a, t_list **b)
 	int	i;
 	int j;
 
+	if ( !a || !(*a) || !b || !(*b))
+		return ;
+	i = 0;
 	max_num = lst_size(*a) - 1;
 	max_bits = size_bits(max_num);
 	while (i < max_bits)
 	{
-		while (j < size)
+		j = 0;
+		while (j < max_bits)
 		{
 			if ( ((*a)->index >> i) & 1 )
-				ra(&a);
+				ra(a);
 			else
-			pb(&a, &b);
+			pb(a, b);
 			j++;
 		}
 		while (*b)
-			pa(&a, &b);
+			pa(a, b);
 		i++;
+	}
+}
+
+void	sort_stack(t_list **a, t_list **b)
+{
+	int	size;
+
+	if ( !a || !(*a) || !b || !(*b))
+		return ;
+	size = lst_size(*a);
+	if ( !is_a_sorted(*a) && size <= 5)
+		sort_small(a, b);	
+	else if (!is_a_sorted(*a)) 
+		final_sort(a,b);
+	else
+	{
+		ft_lstclear(a);
+		ft_lstclear(b);
 	}
 }
 
@@ -60,36 +81,24 @@ void	final_sort(t_list **a, t_list **b)
 int	main(int ac, char **av)
 {
 
-	t_list *head = NULL;
-	t_list *to_sort = NULL;	
-	// t_list	*current;
+	t_list *a;
+	t_list *b;
+	t_list *to_sort;
 
-	if (!first_step(ac, av,&head ))
+	a = NULL;
+	b = NULL;
+	to_sort= NULL;
+
+	if (ac <= 1)
+		return (write(2, "Error\n", 6), 0);
+	if (!first_step(ac, av,&a ))
 		return (0);
-	to_sort = lst_copy(&head);
+	to_sort = lst_copy(&a);
 	ft_index(&to_sort);
-	index_attributition(&head,&to_sort);
+	index_attributition(&a,&to_sort);
+	sort_stack(&a, &b);
 	ft_lstclear(&to_sort);
-	
-	
+	ft_lstclear(&a);	
+	return(0);
 
-
-
-
-
-
-	
-	ft_lstclear(&head);
-	// if (head)
-	// {
-	// 	current = head;
-	// 	printf("head = %d, head = %d\n", current->i, current->index);
-	// 	current = head ->next;
-	// 	while (current != head)
-	// 	{
-	// 		printf("head = %d, head = %d\n", current->i, current->index);
-	// 		current = current->next;
-	// 	}	
-	// return(0);
-	// }
 }

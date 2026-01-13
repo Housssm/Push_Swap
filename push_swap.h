@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 14:44:27 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 12:27:36 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	get_max_value(t_list **lst, t_list **lst_b);
 int		is_a_sorted(t_list *lst);
 void	sort_2(t_list **lst);
 void	sort_3(t_list **lst);
+// void	sort_3(t_list **a, t_list **b);
 void	sort_4(t_list **lst_a, t_list **lst_b);
 void	sort_5(t_list **lst_a, t_list **lst_b);
 void	sort_small(t_list **a, t_list **b);
