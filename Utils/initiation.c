@@ -6,11 +6,11 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:51:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 20:21:53 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:30:26 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 long	ft_atol(const char *s)
 {

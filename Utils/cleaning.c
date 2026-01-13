@@ -6,11 +6,11 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:43:54 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 19:59:22 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:30:10 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	free_tab(char **tab)
 {

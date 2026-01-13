@@ -2,17 +2,16 @@ SRCS = \
 	main.c \
 	Indexing/indexation.c \
 	Indexing/lst_manipulation.c \
-	Indexing/utils.c \
 	Instructions/instruction_rotate.c \
 	Instructions/instruction_swap.c \
 	Instructions/instruction_push.c \
 	Instructions/instruction_rev_rot.c \
 	Sorting/sorting_min_5.c \
 	Sorting/sorting_utils.c \
-	cleaning.c \
-	initiation.c \
-	parsing.c \
-	lst_utils.c
+	Sorting/final_sort.c \
+	Utils/cleaning.c \
+	Utils/initiation.c \
+	Utils/parsing.c 
 
 OBJS = ${SRCS:.c=.o}
 
