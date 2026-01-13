@@ -6,12 +6,11 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:45:30 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 16:00:19 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 19:59:09 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 int	is_valid(char *str)
 {

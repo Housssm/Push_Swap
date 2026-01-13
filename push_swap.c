@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 11:54:41 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/09 21:40:22 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 19:58:51 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,73 +34,72 @@ some arguments not being integers, some arguments exceeding the integer limits, 
 */
 
 
-int	count_num(char *str)
-{
-	int	i;
+// int	count_num(char *str)
+// {
+// 	int	i;
 
-	i = 0;
-	while (*str)
-	{
-		while (*str == ' ')
-			str++;
-		if (*str == '\0')
-			break;
-		while (*str && *str != ' ')
-			str++;
-		i++;
-	}
-	return (i);
-}
-char	*ft_strduper(char *s, int deb, int end)
-{
-	char	*dest;
-	int		i;
+// 	i = 0;
+// 	while (*str)
+// 	{
+// 		while (*str == ' ')
+// 			str++;
+// 		if (*str == '\0')
+// 			break;
+// 		while (*str && *str != ' ')
+// 			str++;
+// 		i++;
+// 	}
+// 	return (i);
+// }
+// char	*ft_strduper(char *s, int deb, int end)
+// {
+// 	char	*dest;
+// 	int		i;
 
-	i = 0;
-	dest = malloc(sizeof(char) * (end - deb) + 1);
-	if (!dest)
-		return (0);
-	while (deb <= end)
-	{
-		dest[i] = s[deb];
-		i++;
-		deb++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+// 	i = 0;
+// 	dest = malloc(sizeof(char) * (end - deb) + 1);
+// 	if (!dest)
+// 		return (0);
+// 	while (deb <= end)
+// 	{
+// 		dest[i] = s[deb];
+// 		i++;
+// 		deb++;
+// 	}
+// 	dest[i] = '\0';
+// 	return (dest);
+// }
 
-void	create_linked(t_list **nod, char *str)
-{
-	int		i;
-	int		k;
-	char 	*number;
+// void	create_linked(t_list **nod, char *str)
+// {
+// 	int		i;
+// 	int		k;
+// 	char 	*number;
 
-	number = NULL;
-	i = 0;
-	while (str[i])
-	{
-		while (str[i] && str[i] == ' ')
-			i++;
-		k = i;
-		while (str[i] && (str[i] != ' '))
-			i++;
-		number = ft_strduper(str, k,i);
-	 	lst_add_back(nod, number);
-		k = i;
-	}	
-	free(str);
-}
+// 	number = NULL;
+// 	i = 0;
+// 	while (str[i])
+// 	{
+// 		while (str[i] && str[i] == ' ')
+// 			i++;
+// 		k = i;
+// 		while (str[i] && (str[i] != ' '))
+// 			i++;
+// 		number = ft_strduper(str, k,i);
+// 	 	lst_add_back(nod, number);
+// 		k = i;
+// 	}	
+// 	free(str);
+// }
 
-void	push_swap(char *stack_a)
-{
-	t_list *head;
+// void	push_swap(char *stack_a)
+// {
+// 	t_list *head;
 
-	head = NULL;
-	if (parsing(stack_a) == 404)
-		return; /*Doit retourner "ERROR"*/
-	create_linked(&head, stack_a);
-	if (is_a_sorted(head) != 1)
-		return; /*Doit retourner "ERROR"*/
-}
-int, fonction doublon et valeur de in max et min 
+// 	head = NULL;
+// 	if (parsing(stack_a) == 404)
+// 		return; /*Doit retourner "ERROR"*/
+// 	create_linked(&head, stack_a);
+// 	if (is_a_sorted(head) != 1)
+// 		return; /*Doit retourner "ERROR"*/
+// }

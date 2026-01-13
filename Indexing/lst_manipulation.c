@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 18:23:28 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 19:59:59 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,34 +39,6 @@ void	lst_swap(t_list *a, t_list *b)
 	a->i = b->i;
 	b->i = temp;
 }
-
-// void	lst_add_back(t_list **lst, char *number)
-// {
-// 	t_list	*new;
-// 	t_list	*last;
-
-// 	if (*lst == NULL)
-// 	{
-// 		(*lst) = (t_list *)malloc(sizeof(t_list));
-// 		if (!(*lst))
-// 			return ;
-// 		(*lst)->i = ft_atoi(number);
-// 		(*lst)->next = (*lst);
-// 		(*lst)->previous = (*lst);
-// 	}
-// 	else
-// 	{
-// 		new = (t_list *)malloc(sizeof(t_list));
-// 		if (!new)
-// 			return ;
-// 		last = (*lst)->previous;
-// 		new->i = ft_atoi(number);
-// 		new->next = (*lst);
-// 		new->previous = last;
-// 		last->next = new;
-// 		(*lst)->previous = new;
-// 	}
-// }
 
 void	lst_add_back(t_list **lst, int number)
 {

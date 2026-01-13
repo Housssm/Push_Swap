@@ -10,7 +10,7 @@ SRCS = \
 	Sorting/sorting_min_5.c \
 	Sorting/sorting_utils.c \
 	cleaning.c \
-	intitiation.c \
+	initiation.c \
 	parsing.c \
 	lst_utils.c
 

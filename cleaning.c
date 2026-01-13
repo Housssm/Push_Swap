@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:43:54 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/12 14:55:56 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 19:59:22 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ void	free_tab(char **tab)
 	}
 	free (tab);
 }
-
-// void	ft_lstdelone(t_list *lst)
-// {
-// 	if (lst)
-// 		free(lst);
-// }
 
 void	ft_lstclear(t_list **lst)
 {

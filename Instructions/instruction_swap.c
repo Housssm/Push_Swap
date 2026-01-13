@@ -6,13 +6,13 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:43:48 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/08 14:03:41 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:04:57 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(t_list **lst)
+void	s_original(t_list **lst)
 {
 	t_list	*node;
 
@@ -26,23 +26,17 @@ void	sa(t_list **lst)
 	node->previous = (*lst);
 	(*lst)->next->previous = node;
 	(*lst)->next = node;
+}
+
+void	sa(t_list **lst)
+{
+	s_original(lst);
 	write(1, "sa\n", 3);
 }
 
 void	sb(t_list **lst)
 {
-	t_list	*node;
-
-	if (!lst || !(*lst) || (*lst)->next == *lst)
-		return ;
-	node = *lst;
-	node->previous->next = node->next;
-	node->next->previous = node->previous;
-	*lst = node->next;
-	node->next = (*lst)->next;
-	node->previous = (*lst);
-	(*lst)->next->previous = node;
-	(*lst)->next = node;
+	s_original(lst);
 	write(1, "sb\n", 3);
 }
 
