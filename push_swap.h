@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:37:46 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 20:28:39 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:56:54 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 # include "libft/libft.h"
 # include <limits.h>
 
-
-
 // Linked list structure
 typedef struct s_list
 {
@@ -28,8 +26,6 @@ typedef struct s_list
 	int				index;
 	struct s_list	*next;
 	struct s_list	*previous;
-	int				exist;
-	
 }t_list;
 
 // Needed operations
@@ -60,9 +56,7 @@ int		find_index_max(t_list **sorted);
 int		find_lst_index(t_list **sorted, int idx);
 void	find_lst_int(t_list **original, int value, int idx);
 void	index_attributition(t_list **or, t_list **sorted);
-
-int	lst_size(t_list *lst);
-
+int		lst_size(t_list *lst);
 
 // Sorting
 void	get_min_value(t_list **lst, t_list **lst_b);
@@ -73,7 +67,7 @@ void	sort_3(t_list **lst);
 void	sort_4(t_list **lst_a, t_list **lst_b);
 void	sort_5(t_list **lst_a, t_list **lst_b);
 void	sort_small(t_list **a, t_list **b);
-int	size_bits(int nb);
+int		size_bits(int nb);
 void	final_sort(t_list **a, t_list **b);
 void	sort_stack(t_list **a, t_list **b);
 
@@ -86,7 +80,6 @@ void	ft_lstclear(t_list **lst);
 int		is_valid(char *str);
 int		parsing(char **av);
 int		check_double(t_list **lst);
-int	first_step(int ac, char **av, t_list **lst);
-
+int		first_step(int ac, char **av, t_list **lst);
 
 #endif

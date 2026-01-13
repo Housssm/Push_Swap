@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:55:53 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 17:11:06 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:45:23 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_index(t_list **lst)
 	t_list	*current;
 	int		j;
 
-	if ( !lst || !(*lst))
+	if (!lst || !(*lst))
 		return ;
 	current = (*lst);
 	ft_lst_sorted(current);
@@ -38,7 +38,7 @@ int	find_index_max(t_list **sorted)
 	t_list	*current;
 	int		index_max;
 
-	if ( !sorted || !(*sorted))
+	if (!sorted || !(*sorted))
 		return (0);
 	index_max = 0;
 	current = *sorted;
@@ -57,7 +57,7 @@ int	find_lst_index(t_list **sorted, int idx)
 {
 	t_list	*current;
 
-	if ( !sorted || !(*sorted))
+	if (!sorted || !(*sorted))
 		return (0);
 	current = (*sorted);
 	if (current->index == idx)
@@ -77,7 +77,7 @@ void	find_lst_int(t_list **original, int value, int idx)
 {
 	t_list	*current;
 
-	if ( !original || !(*original))
+	if (!original || !(*original))
 		return ;
 	current = (*original);
 	if (current->i == value)
@@ -98,7 +98,7 @@ void	index_attributition(t_list **or, t_list **sorted)
 	int		i;
 	int		index_max;
 
-	if ( !or || !(*or) || !sorted || !(*sorted))
+	if (!or || !(*or) || !sorted || !(*sorted))
 		return ;
 	i = 0;
 	value_to_find = 0;

@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 19:51:25 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 20:30:26 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:48:16 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ int	created_linked_list(int ac, char **av, t_list **lst)
 {
 	int			i;
 	long int	check;
-	
+
 	if (!lst)
 		return (0);
 	i = 1;
 	while (i < ac)
 	{
 		check = ft_atol(av[i]);
-		if ( check > INT_MAX || check < INT_MIN)
+		if (check > INT_MAX || check < INT_MIN)
 		{
 			ft_lstclear(lst);
 			return (0);
@@ -87,7 +87,3 @@ int	first_step(int ac, char **av, t_list **lst)
 	}
 	return (1);
 }
-
-
-
-

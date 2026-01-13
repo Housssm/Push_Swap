@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 09:20:23 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 20:38:43 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:48:45 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	lst_size(t_list *lst)
 {
 	t_list	*current;
 	int		size;
-	
+
 	size = 0;
 	current = lst->next;
 	size += 1;
@@ -27,12 +27,13 @@ int	lst_size(t_list *lst)
 	}
 	return (size);
 }
+
 int	size_bits(int nb)
 {
 	int	bits;
-	
+
 	bits = 0;
-	while ( nb > 0)
+	while (nb > 0)
 	{
 		nb >>= 1;
 		bits++;
@@ -43,11 +44,11 @@ int	size_bits(int nb)
 void	final_sort(t_list **a, t_list **b)
 {
 	int	max_num;
-	int max_bits;
+	int	max_bits;
 	int	i;
-	int size;
+	int	size;
 
-	if ( !a || !(*a) || !b)
+	if (!a || !(*a) || !b)
 		return ;
 	i = 0;
 	max_num = lst_size(*a) - 1;
@@ -57,7 +58,7 @@ void	final_sort(t_list **a, t_list **b)
 		size = lst_size(*a);
 		while (size--)
 		{
-			if ( ((*a)->index >> i) & 1 )
+			if (((*a)->index >> i) & 1)
 				ra(a);
 			else
 				pb(a, b);
@@ -72,13 +73,13 @@ void	sort_stack(t_list **a, t_list **b)
 {
 	int	size;
 
-	if ( !a || !(*a) || !b )
-		return ;		
+	if (!a || !(*a) || !b)
+		return ;
 	size = lst_size(*a);
-	if ( !is_a_sorted(*a) && size <= 5)
-		sort_small(a, b);	
-	else if (!is_a_sorted(*a)) 
-		final_sort(a,b);
+	if (!is_a_sorted(*a) && size <= 5)
+		sort_small(a, b);
+	else if (!is_a_sorted(*a))
+		final_sort(a, b);
 	else
 	{
 		ft_lstclear(a);

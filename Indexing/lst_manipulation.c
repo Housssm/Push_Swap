@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:45:43 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 19:59:59 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:44:18 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*lst_copy(t_list **lst)
 {
 	t_list	*current;
 	t_list	*new;
-	
+
 	if (! lst || !(*lst))
 		return (NULL);
 	new = NULL;
@@ -66,7 +66,6 @@ void	lst_add_back(t_list **lst, int number)
 		last->next = new;
 		(*lst)->previous = new;
 	}
-
 }
 
 void	lst_add_back_int(t_list **lst, int number)
@@ -95,7 +94,7 @@ void	lst_add_back_int(t_list **lst, int number)
 		last->next = new;
 		(*lst)->previous = new;
 	}
-} 
+}
 
 void	ft_lst_sorted(t_list *lst)
 {

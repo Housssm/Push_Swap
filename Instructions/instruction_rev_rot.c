@@ -6,7 +6,7 @@
 /*   By: hoel-har <hoel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 19:17:01 by hoel-har          #+#    #+#             */
-/*   Updated: 2026/01/13 20:09:39 by hoel-har         ###   ########.fr       */
+/*   Updated: 2026/01/13 20:51:36 by hoel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	rr_original(t_list **lst)
 		return ;
 	*lst = (*lst)->previous;
 }
+
 void	rra(t_list **lst)
 {
 	rr_original(lst);
